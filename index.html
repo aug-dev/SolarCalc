@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora Solar</title>
+        
+        
+        <meta name="description" content = "Criado para auxiliar pessoas interessadas em transição energética">
+    </head>
+
+    <body>
+        <header>
+            <h1><strong>Calculadora Solar</strong></h1>
+            <p>Descubra o quanto você pode <strong>economizar!</strong></p>
+        </header>
+        <main>
+            <section>
+                <!--Aqui irei falar sobre a transição energetica num breve paragrafo
+                e embaixo em outra section irei colocar os campos para inseriri o valor
+                 e fazer a conta-->
+                <p>A Transição Energetica, uma solução que viabiliza sua autonomia, e reduz o impacto ambiental.   </p>
+            </section>
+            <form id="formSolar">
+            <section id="triagem">
+                    <label for="estado">Estado</label>
+                    <input type="text" id = "estado" required><br>
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id = "cidade" required>
+            </section>
+            <section id="entrada">
+                    <label for="gastoMensal">Gasto Mensal com Energia (R$)</label><br>
+                    <input type="number" id="gastoMensal" required placeholder="Ex: 350R$">
+                    <button type="submit" id="btCalcular">Calcular</button>               
+            </section>
+            <section id="resultado" hidden>
+                <h2>Confira o Resultado:</h2>
+
+                <p id="economia"></p>
+                <p id=""></p>
+
+                <a id="btnZapZap" href="linkdozap">Receber proposta no Whatsapp</a>
+            </section>
+            </form>
+        </main>
+        <footer>
+
+        </footer>
+        <script src="calcula.js"></script>
+    </body>
+</html>
