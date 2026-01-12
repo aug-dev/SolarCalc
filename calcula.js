@@ -6,7 +6,8 @@ form.addEventListener("submit", function(event){
 
 console.log("botao calcular clicado");
 
-const estado = document.getElementById("estado");
+const estadoInput = document.getElementById("estado");
+const estadoSigla = estadoInput.value.trim().toUpperCase();
 const cidade = document.getElementById("cidade");
 const inputValor = document.getElementById("gastoMensal");
 const gastoMensal = Number(inputValor.value);
@@ -17,10 +18,21 @@ if(resultadoSection){
    console.log("resultado apareceu");
 }
 
-const pot = gastoMensal/5*30;
-const qntPaineil = pot/0.55;
-console.log(qntPaineil);
+const hspPorEstado = {
+AM: 5.5,
+SP: 5.4,
+RJ: 5.1
+
+}
+const perdas = 0.75;
+const hsp = hspPorEstado[estadoSigla];
+const pot = gastoMensal/(hsp*30*perdas);
+let qntPaineil = pot/0.55; //a potencia total dividido por uma potencia individual de um painel de 550w
+qntPaineil = Math.round(qntPaineil);
+const temp = document.getElementById("qntPaineis");
+temp.innerText = `Vai precisar de ${qntPaineil} paineis solares`;
 
 
+console.log(hsp);
 });
 

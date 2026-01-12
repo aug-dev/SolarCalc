@@ -24,10 +24,11 @@
             <form id="formSolar">
             <section id="triagem">
                     <label for="estado">Estado</label>
-                    <input type="text" id = "estado" required><br>
+                    <input type="text" id = "estado" placeholder="Digite a sigla aqui..." maxlength="2" required><br><br>
                     <label for="cidade">Cidade</label>
                     <input type="text" id = "cidade" required>
             </section>
+        
             <section id="entrada">
                     <label for="gastoMensal">Gasto Mensal com Energia (R$)</label><br>
                     <input type="number" id="gastoMensal" required placeholder="Ex: 350R$">
@@ -35,10 +36,12 @@
             </section>
             <section id="resultado" hidden>
                 <h2>Confira o Resultado:</h2>
-
-                <p id="economia"></p>
-                <p id=""></p>
-
+                <hr>
+                <p id="economia" borde = "2"></p>
+                <p id="qntPaineis" borde = "2"></p>
+                <p> é painel pra porra</p>
+                <img src="./assets/dogeyesclosed.gif" alt="">
+                <hr>
                 <a id="btnZapZap" href="linkdozap">Receber proposta no Whatsapp</a>
             </section>
             </form>
